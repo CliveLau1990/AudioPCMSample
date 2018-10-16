@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:rowCount="2"
+    android:columnCount="2">
+
+    <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:rowCount="2"
+            android:columnCount="4">
+
+            <Button
+                android:id="@+id/idStartAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:layout_rowWeight="1"
+                android:background="@drawable/button_bg"
+                android:text="开始录音"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/idStopAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_bg"
+                android:enabled="false"
+                android:text="停止录音"
+                android:textColor="@android:color/white"/>
+
+            <RadioGroup
+                android:id="@+id/idSourceGroupA"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:layout_rowSpan="2"
+                android:layout_gravity="fill_vertical">
+
+                <RadioButton
+                    android:id="@+id/idSourceDefault"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="0:Default"/>
+                <RadioButton
+                    android:id="@+id/idSourceMic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1:Mic"/>
+                <RadioButton
+                    android:id="@+id/idSourceVoiceUplink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2:VoiceUplink"/>
+                <RadioButton
+                    android:id="@+id/idSourceVoiceDownlink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3:VoiceDownlink"/>
+                <RadioButton
+                    android:id="@+id/idSourceVoiceCall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4:VoiceCall"/>
+                <RadioButton
+                    android:id="@+id/idSourceCamcorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="5:Camcorder"/>
+                <RadioButton
+                    android:id="@+id/idSourceVoiceRecognition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="6:VoiceRecognition"/>
+                <RadioButton
+                    android:id="@+id/idSourceVoiceCommunication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="7:VoiceCommunication"/>
+                <RadioButton
+                    android:id="@+id/idSourceRemoteSubmix"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8:RemoteSubmix"/>
+                <RadioButton
+                    android:id="@+id/idSourceUnprocessed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="9:Unprocessed"/>
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/idPlayAudio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="2"
+                android:layout_rowWeight="1"
+                android:background="@drawable/button_bg"
+                android:enabled="false"
+                android:text="播放音频"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/idSwitchAudio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_row="1"
+                android:layout_column="2"
+                android:layout_rowWeight="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/button_bg"
+                android:text="切换输出"
+                android:textColor="@android:color/white"/>
+
+            <RadioGroup
+                android:id="@+id/idSinkGroupA"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:layout_row="0"
+                android:layout_column="3"
+                android:layout_rowSpan="2"
+                android:layout_gravity="fill_vertical">
+
+                <RadioButton
+                    android:id="@+id/idSinkVoiceCall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="0:VoiceCall"/>
+                <RadioButton
+                    android:id="@+id/idSinkSystem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1:System"/>
+                <RadioButton
+                    android:id="@+id/idSinkMusic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2:Music"/>
+                <RadioButton
+                    android:id="@+id/idSinkAlarm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3:Alarm"/>
+                <RadioButton
+                    android:id="@+id/idSinkNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4:Notification"/>
+                <RadioButton
+                    android:id="@+id/idSinkDtmf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="8:DTMF"/>
+                <RadioButton
+                    android:id="@+id/idSinkAccessibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10:Accessibility"/>
+            </RadioGroup>
+        </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:orientation="vertical"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输入设备："
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/idSourceTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Source device"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="输出设备："
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/idSinkTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Sink device"
+                android:textColor="@android:color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/idScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_row="1"
+        android:layout_column="1">
+
+        <TextView
+            android:id="@+id/idLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"/>
+
+    </ScrollView>
+
+</GridLayout>
